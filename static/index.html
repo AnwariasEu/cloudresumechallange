@@ -16,14 +16,16 @@
       <h2 id="name">Anwarias</h2></div>
       <div id="visitorcounter"> </div>
     <script>
-      let url = "https://cloudresumechallange.anwarias.de/website.html";
-      fetch(url).then(function(data) {
-        console.log(data);
-        return data;
+      let url = "https://kmbcoghzo2.execute-api.eu-central-1.amazonaws.com";
+      fetch(url).then(function(response){
+        response.json().then(function(data){
+          console.log(data);
+          return data;
+        })
       })
       .then((data) => {
         let visitorcounter = document.getElementById("visitorcounter");
-        visitorcounter.innerHTML = ${data.body}
+        visitorcounter.innerHTML = `${data.body}`
       })
     </script>
   </body>
