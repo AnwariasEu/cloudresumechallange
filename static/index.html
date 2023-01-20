@@ -20,12 +20,9 @@
       fetch(url).then(function(response){
         response.json().then(function(data){
           console.log(data);
-          return data;
+          let visitorcounter = document.getElementById("visitorcounter");
+          visitorcounter.innerHTML = "Total amount of visitors:"+data;
         })
-      })
-      .then((data) => {
-        let visitorcounter = document.getElementById("visitorcounter");
-        visitorcounter.innerHTML = `${data.body}`
       })
     </script>
   </body>
