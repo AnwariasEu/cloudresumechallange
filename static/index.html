@@ -5,24 +5,54 @@
     <div class="left"></div>
     <div class="stuff">
       <br><br>
-      <h1>Index</h1>
+      <h1>Resume</h1>
       <h2>Anwarias</h2>
-      <h3>New Headline</h3>
       <hr />
       <br>
+      <p class="head">Interests</p>
+      <ul>
+        <li>Network</li>
+        <li>Linux</li>
+        <li>Programming</li>
+        <li>Computer Science</li>
+      </ul>
+      <p class="head">Skills</p>
+      <ul>
+        <li>Linux</li>
+        <li>Networking</li>
+      </ul>
+      <p class="head">Education</p>
+      <ul>
+        <a href="http://www.rwth-aachen.de">
+          <li>RWTH-Aachen</li>
+        </a>
+        <!--Link-->
+        <li>Codeacademy</li>
+      </ul>
+      <p class="head">Experience</p>
+      <ul>
+        <li>Hiwi at COMSYS</li>
+        <li>Network Engineer at DE-CIX</li>
+      </ul>
+      <p class="head">Extracurriculars</p>
+      <ul>
+        <li>Bloudering</li>
+      </ul>
     </div>
     <div class="right"></div>
     <div id="footer">
-      <h2 id="name">Anwarias</h2></div>
-      <div id="visitorcounter"> </div>
-    <script>
-      let url = "https://kmbcoghzo2.execute-api.eu-central-1.amazonaws.com";
-      fetch(url).then(function(response){
-        response.json().then(function(data){
-          console.log(data);
-          let visitorcounter = document.getElementById("visitorcounter");
-          visitorcounter.innerHTML = "Total amount of visitors:"+data;
-        })
-      })
-    </script>
+      <h2 id="name">Anwarias</h2>
+      <div id="visitorcounter"></div>  
+        <script>
+          let url = "https://kmbcoghzo2.execute-api.eu-central-1.amazonaws.com";
+          fetch(url).then(function(response){
+            response.json().then(function(data){
+              console.log(data);
+              let visitorcounter = document.getElementById("visitorcounter");
+              visitorcounter.innerHTML = "Total amount of visitors:"+data;
+            })
+          })
+        </script>
+    <div>
   </body>
+</html>
